@@ -81,19 +81,20 @@ const styles = {
   }
 };
 
-//const mapStateProps = state => {
-//  return {
-//    email: state.auth.email,
-//    password: state.auth.password,
-//    error: state.auth.error
-//  };
-//};
-
-const mapStateProps = ({ auth }) => {
-  const { email, password, error, loading } = auth;
-
-  return { email, password, error, loading };
+const mapStateProps = state => {
+  console.log(state);
+  return {
+    email: state.auth.email,
+    password: state.auth.password,
+    error: state.auth.error,
+    loading: state.loading
+  };
 };
+
+//const mapStateProps = ({ auth }) => {
+//  const { email, password, error, loading } = auth;
+//  return { email, password, error, loading };
+//};
 
 export default connect(mapStateProps, {
   emailChanged, passwordChanged, loginUser
