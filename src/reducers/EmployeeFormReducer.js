@@ -1,6 +1,7 @@
 import {
   EMPLOYEE_UPDATE,
-  EMPLOYEE_CREATE
+  EMPLOYEE_CREATE,
+  EMPLOYEE_SAVE_SUCCESS
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -33,7 +34,9 @@ export default (state = INITIAL_STATE, action) => {
       // Because we save it does not mean that state gets automatically cleared.
       // We can dispatch and Action from (EmployeeActions)
         return INITIAL_STATE;
-        
+
+      case EMPLOYEE_SAVE_SUCCESS:
+        return INITIAL_STATE;
     default:
      return state;
 }

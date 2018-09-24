@@ -25,7 +25,7 @@ componentWillReceiveProps(nextProps) {
 //Another helper method creating called createDataSource and expect
 //this to be called with a prop's object.
 //(so here we expect that props object to have a property of employees)
-createDataSource({ employees }){
+createDataSource({ employees }) {
   const ds = new ListView.DataSource({
     rowHasChanged: (r1, r2) => r1 !== r2
   });
