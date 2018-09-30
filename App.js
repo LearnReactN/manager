@@ -12,7 +12,6 @@ import { createStore, applyMiddleware } from 'redux'; //to include any type of m
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk'; // middleware to our redux app
 import reducers from './src/reducers';
-import LoginForm from './src/components/LoginForm';
 import Router from './src/Router';
 
 type Props = {};
